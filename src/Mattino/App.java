@@ -3,9 +3,9 @@ package Mattino;
 public class App {
 
     public static void main(String[] args) throws Exception {
-        // teatroTest();
-        // studenteTest();
-        // contoTest();
+        teatroTest();
+        studenteTest();
+        contoTest();
         rubricaTest();
     }
 

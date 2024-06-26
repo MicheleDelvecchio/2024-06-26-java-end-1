@@ -1,4 +1,4 @@
-
+package Pomeriggio;
 public class Prenotazione {
 
     private Cliente cliente;

@@ -1,3 +1,4 @@
+package Pomeriggio;
 
 public class AppPomeriggio {
 
@@ -46,7 +47,8 @@ public class AppPomeriggio {
      */
     public static void main(String[] args) {
         // votoTest();
-        albergoTest();
+        // albergoTest();
+        jobsTest();
     }
 
     public static void votoTest() {
@@ -112,20 +114,29 @@ public class AppPomeriggio {
             hotel.booking(cliente5, camera5);
 
             hotel.mostraPrenotazioni();
-
-            hotel.removeBooking(cliente1);
-
+            hotel.removeBooking(cliente1); // RIMUOVO   
             hotel.mostraPrenotazioni();
-
-            hotel.aggiungiCamera(camera6);
-
-            hotel.modifyBooking(cliente5, camera6);
-
+            hotel.aggiungiCamera(camera6); // AGGIUNGO UNA NUOVA CAMERA
+            hotel.modifyBooking(cliente5, camera6); // MODIFICO LA CAMERA DEL CLIENTE 5
             hotel.mostraPrenotazioni();
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
+    }
+
+    public static void jobsTest() {
+        Impiegato imp1 = new Impiegato("Mario Rossi", 3000);
+        Manager man1 = new Manager("Luigi Verdi", 4000, 500);
+
+        Impiegato[] dipendenti = {imp1, man1};
+
+        for (Impiegato imp : dipendenti) {
+            imp.aumentaSalario(10);
+        }
+
+        for (Impiegato imp : dipendenti) {
+            System.out.println("Nome: " + imp.getName() + ", Salario: " + imp.getSalario());
+        }
     }
 }

@@ -1,3 +1,4 @@
+package Pomeriggio;
 
 public class Camera {
 
